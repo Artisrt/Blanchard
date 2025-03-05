@@ -1,6 +1,14 @@
 @media (max-width: 1800px) {
-  .header-nav {
+
+  /* .header-nav {
     margin-right: 100px;
+  } */
+  .search {
+    margin-left: 100px;
+  }
+
+  .search.active {
+    margin-left: 10px;
   }
 
   .card-info {
@@ -23,10 +31,6 @@
 }
 
 @media (max-width: 1600px) {
-  .container {
-
-    /* padding: 0 85px; */
-  }
 
   .header-container {
     flex-wrap: wrap;
@@ -37,18 +41,20 @@
   .header-logo {
     order: 1;
     margin-right: 0;
+    padding-right: 0;
   }
 
   .header-nav {
     display: flex;
-    margin-right: 0;
     justify-content: center;
     width: 100%;
     justify-content: center;
     order: 3;
   }
 
-  .header-btn {
+  .search,
+  .search.active {
+    margin-left: 0;
     order: 2;
   }
 
@@ -466,7 +472,11 @@
     height: 22px;
   }
 
-  .header-btn svg {
+  /* .header-btn svg {
+    width: 18px;
+    height: 8px;
+  } */
+  .search .icon::before {
     width: 18px;
     height: 8px;
   }

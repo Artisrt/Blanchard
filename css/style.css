@@ -186,6 +186,7 @@ section {
 
 .header-logo {
   margin-right: auto;
+  padding-right: 15px;
 
 }
 
@@ -193,9 +194,7 @@ section {
   outline: none;
 }
 
-.header-nav {
-  margin-right: 300px;
-}
+
 
 
 .header-list {
@@ -210,6 +209,119 @@ section {
   line-height: 24.51px;
 }
 
+
+/* /////////////// */
+.search {
+  margin-left: 300px;
+  position: relative;
+  width: 28px;
+  height: 44px;
+  border-radius: 10px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.search .icon {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.search .icon::before {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background-image: url('../img/button-header.svg');
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+  background-position: center center;
+}
+
+.search.active {
+  margin-left: 50px;
+  width: 250px;
+  background-color: #acacac56;
+}
+
+.active .icon::before {
+  background-image: none;
+}
+
+.search .header__form {
+  position: relative;
+  width: 250px;
+  height: 44px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #acacac56; */
+}
+
+.search .header__form .header__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: #e1e1e1f1;
+  background-color: inherit;
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+.header__input::placeholder {
+  color: #ecececc7;
+  transition: opacity 1.7s ease-in-out;
+  opacity: 1;
+}
+
+.header__input:focus::placeholder {
+  opacity: 0;
+}
+
+
+.clear {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.clear::before {
+  color: #ececec6e;
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 15px;
+  background-color: #ECECEC;
+  transform: rotate(45deg);
+}
+
+.clear::after {
+  color: #ececec6e;
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 15px;
+  background-color: #ECECEC;
+  transform: rotate(-45deg);
+}
 
 .header-btn {
   border-radius: 0px;

@@ -476,10 +476,10 @@
     width: 18px;
     height: 8px;
   } */
-  .search .icon::before {
+/*   .search .icon::before {
     width: 18px;
     height: 8px;
-  }
+  } */
 
   .header-link {
     color: var(--color-title-white);
